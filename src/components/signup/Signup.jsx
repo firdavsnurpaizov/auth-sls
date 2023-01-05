@@ -10,7 +10,7 @@ const SignupSchema = Yup.object().shape({
     .max(70, "Too Long!")
     .required("Add email"),
   password: Yup.string()
-    .min(1, "Too Short!")
+    .min(8, "Too Short!")
     .max(70, "Too Long!")
     .required("Add password"),
 });

@@ -10,8 +10,8 @@ const SignupSchema = Yup.object().shape({
     .max(70, "Too Long!")
     .required("Add email"),
   password: Yup.string()
-    .min(1, "Too Short!")
-    .max(70, "Too Long!")
+    .min(8, "Too Short!")
+    .max(70fit , "Too Long!")
     .required("Add password"),
 });
 
@@ -23,8 +23,7 @@ const Signin = () => {
     password: "",
   };
 
-  const onSubmit = async (values) => { 
-
+  const onSubmit = async (values) => {
     try {
       fetch(
         "https://168szb6bze.execute-api.us-east-1.amazonaws.com/dev/user/login",
